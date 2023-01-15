@@ -15,11 +15,12 @@ export default class Application extends EventEmitter {
   }
   setEmojis(emojis) {
     this.emojis = emojis;
-    const newDiv = document.createElement("div")
-    const newContent = document.createTextNode(newArr)
-    newP.appendChild(newContent)
-    const currentDiv = document.getElementById("emojis")
-    document.body.insertBefore(newDiv, currentDiv)  
+    this.emojis.forEach(emoji => {
+      const p = document.createElement("p")
+      p.textContent = emoji;
+      this.div.appendChild(p)
+    })
+    
   }
 
   addBananas() {
