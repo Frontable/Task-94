@@ -27,3 +27,5 @@ export default class Application extends EventEmitter {
     let newArr = emojis.map(banana)
   }  
 }
+
+alert("hello");
